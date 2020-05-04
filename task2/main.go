@@ -7,7 +7,6 @@ import (
 
 func main() {
 	//Виклик методів
-
 	fmt.Println(worker1.age)
 	worker1.SetAge()
 	fmt.Println(worker1.age)
@@ -17,7 +16,7 @@ func main() {
 	worker1pointer.age = 20
 	*agePointer = 33
 
-    fmt.Println(worker1.age	)
+    fmt.Println(worker1.age)
 	fmt.Println(worker2.age)
 
 	//Виклик паніки
