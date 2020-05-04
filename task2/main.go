@@ -7,17 +7,17 @@ import (
 
 func main() {
 	//Виклик методів
-	fmt.Println(worker1.age)
-	worker1.SetAge()
-	fmt.Println(worker1.age)
-	worker1.HappyBirthday()
+	fmt.Println(worker1.person.age)
+	worker1.person.SetAge()
+	fmt.Println(worker1.person.age)
+	worker1.person.HappyBirthday()
 
 	//Операції з вказівниками
-	worker1pointer.age = 20
+	worker1pointer.person.age = 20
 	*agePointer = 33
 
-    fmt.Println(worker1.age)
-	fmt.Println(worker2.age)
+    fmt.Println(worker1.person.age)
+	fmt.Println(worker2.person.age)
 
 	//Виклик паніки
 	ann := &person{}
@@ -33,7 +33,7 @@ func main() {
 }
 
 func (w worker) fullInfo() string {
-	return "name:" + w.name + "\nage:" + strconv.Itoa(w.age) + "\nposition:" + w.position + "\neducation:" + w.education +
+	return "name:" + w.person.name + "\nage:" + strconv.Itoa(w.person.age) + "\nposition:" + w.position + "\neducation:" + w.education +
 		"\nyears of experience:" + strconv.Itoa(w.yearsOfExperience)
 }
 func (p *person) Hello()  {
